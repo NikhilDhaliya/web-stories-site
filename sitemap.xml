@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://nikhildhaliya.github.io/web-stories-site/index.html</loc>
+        <loc>https://nikhildhaliya.github.io/web-stories-site/</loc>
         <lastmod>2024-03-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://nikhildhaliya.github.io/web-stories-site/about.html</loc>
-        <lastmod>2024-03-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://nikhildhaliya.github.io/web-stories-site/contact.html</loc>
-        <lastmod>2024-03-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://nikhildhaliya.github.io/web-stories-site/privacy.html</loc>
-        <lastmod>2024-03-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://nikhildhaliya.github.io/web-stories-site/stories/story1.html</loc>
