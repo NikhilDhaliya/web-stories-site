@@ -3,14 +3,26 @@
     @import url('styles/style.css');
 </style>
 
+<!-- Update paths -->
+<link rel="canonical" href="https://nikhildhaliya.github.io/web-stories-site/index.html">
+
 <!-- Update navigation links -->
 <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
         <li><a href="#stories">Stories</a></li>
     </ul>
 </nav>
 
 <!-- Update story links -->
-<div class="story-preview" onclick="window.location.href='/stories/story1.html'"> 
+<div class="story-preview" onclick="window.location.href='./stories/story1.html'">
+
+<!-- Add preload for critical resources -->
+<link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
+<link rel="preload" as="style" href="styles/style.css">
+
+<!-- Add preconnect for external resources -->
+<link rel="preconnect" href="https://cdn.ampproject.org">
+<link rel="dns-prefetch" href="https://cdn.ampproject.org">
+</div>
