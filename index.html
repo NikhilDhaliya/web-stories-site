@@ -46,35 +46,13 @@
         </nav>
     </header>
 
-    <amp-animation id="fadeInAnimation" layout="nodisplay">
-        <script type="application/json">
-        {
-            "duration": "1s",
-            "fill": "both",
-            "iterations": "1",
-            "animations": [{
-                "selector": ".fade-in",
-                "keyframes": {
-                    "opacity": [0, 1],
-                    "transform": ["translateY(20px)", "translateY(0)"]
-                }
-            }]
-        }
-        </script>
-    </amp-animation>
-
     <main>
         <section id="stories">
-            <h1 class="fade-in">Featured Web Stories</h1>
-            <amp-position-observer
-                on="enter:fadeInAnimation.start"
-                intersection-ratios="0.5"
-                layout="nodisplay">
-            </amp-position-observer>
+            <h1>Featured Web Stories</h1>
             
             <div class="stories-grid">
                 <!-- Story Preview 1 -->
-                <div class="story-preview fade-in" role="button" tabindex="0" onclick="window.location.href='./stories/story1.html'">
+                <div class="story-preview" role="button" tabindex="0" onclick="window.location.href='./stories/story1.html'">
                     <div class="story-content">
                         <div class="story-placeholder">
                             <h3>Amazing Travel Story</h3>
@@ -84,7 +62,7 @@
                 </div>
 
                 <!-- Story Preview 2 -->
-                <div class="story-preview fade-in" role="button" tabindex="0" onclick="window.location.href='./stories/story2.html'">
+                <div class="story-preview" role="button" tabindex="0" onclick="window.location.href='./stories/story2.html'">
                     <div class="story-content">
                         <div class="story-placeholder">
                             <h3>Cooking Adventure</h3>
@@ -105,12 +83,5 @@
             <p>&copy; 2024 Web Stories Site. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Add noscript fallback -->
-    <noscript>
-        <div style="text-align: center; padding: 2rem;">
-            Please enable JavaScript to view our stories in the best possible way.
-        </div>
-    </noscript>
 </body>
 </html>

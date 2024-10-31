@@ -84,6 +84,8 @@ h1::after {
 
 /* Stories grid */
 .stories-grid {
+    opacity: 1;
+    transform: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
@@ -98,14 +100,8 @@ h1::after {
     position: relative;
     height: 450px;
     cursor: pointer;
-    transition: all 0.3s ease;
     background: #f5f5f5;
     border: 1px solid #eaeaea;
-}
-
-.story-preview:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
 }
 
 .story-overlay {
@@ -208,8 +204,8 @@ button[type="submit"]:hover {
 
 /* Animation classes */
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 1;
+    transform: none;
 }
 
 @keyframes fadeInUp {
@@ -369,4 +365,215 @@ nav a::after {
 /* Smooth scroll behavior */
 html {
     scroll-behavior: smooth;
+}
+
+/* Add these mobile-specific styles */
+
+/* Mobile-first base styles */
+:root {
+    --header-height: 60px;
+    --footer-height: 80px;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        margin-bottom: 2rem;
+    }
+
+    .story-placeholder h3 {
+        font-size: 1.4rem;
+    }
+
+    .story-placeholder p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 0.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        margin-top: calc(var(--header-height) + 2rem);
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile story grid */
+@media (max-width: 768px) {
+    .stories-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .story-preview {
+        height: 350px;
+    }
+
+    .story-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        margin: 0;
+        padding: 0.5rem;
+    }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) {
+    .story-preview:hover {
+        transform: none;
+    }
+
+    .story-preview:active {
+        background: #f0f0f0;
+    }
+
+    .story-placeholder::after {
+        display: none;
+    }
+}
+
+/* Better spacing for mobile */
+@media (max-width: 768px) {
+    .about-content,
+    .contact-content,
+    .privacy-content {
+        padding: 2rem 1rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Add smooth scrolling for iOS */
+@supports (-webkit-overflow-scrolling: touch) {
+    body {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Improve tap targets */
+@media (max-width: 768px) {
+    button,
+    input,
+    select,
+    textarea {
+        min-height: 44px;
+    }
+
+    .story-preview {
+        min-height: 200px;
+    }
+}
+
+/* Animation classes - Only for desktop */
+@media (min-width: 769px) {
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .story-preview:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .story-preview:hover .story-placeholder::after {
+        transform: translateX(10px);
+    }
+
+    .story-preview:hover .story-content::before {
+        opacity: 1;
+    }
+
+    .story-preview:hover .story-placeholder h3 {
+        transform: translateX(10px);
+        transition: transform 0.3s ease;
+    }
+}
+
+/* Remove animations for mobile */
+@media (max-width: 768px) {
+    .fade-in {
+        opacity: 1;
+        transform: none;
+    }
+
+    .story-preview {
+        transform: none;
+        transition: none;
+    }
+
+    .story-preview:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .story-placeholder::after {
+        display: none;
+    }
+
+    .story-content::before {
+        display: none;
+    }
+
+    .story-placeholder h3 {
+        transform: none;
+        transition: none;
+    }
+
+    /* Remove scroll animations */
+    amp-position-observer {
+        display: none;
+    }
 }
