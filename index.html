@@ -6,7 +6,7 @@
     <title>Web Stories - Travel & Cooking Adventures | Your Story Platform</title>
     
     <!-- AMP required scripts - correct preload order -->
-    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js" crossorigin="anonymous">
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js" crossorigin>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     
     <!-- Other AMP scripts -->
@@ -46,11 +46,29 @@
         </nav>
     </header>
 
+    <amp-animation id="fadeInAnimation" layout="nodisplay">
+        <script type="application/json">
+        {
+            "duration": "1s",
+            "fill": "both",
+            "iterations": "1",
+            "animations": [{
+                "selector": ".fade-in",
+                "keyframes": {
+                    "opacity": [0, 1],
+                    "transform": ["translateY(20px)", "translateY(0)"]
+                }
+            }]
+        }
+        </script>
+    </amp-animation>
+
     <main>
         <section id="stories">
             <h1 class="fade-in">Featured Web Stories</h1>
             <amp-position-observer
                 on="enter:fadeInAnimation.start"
+                intersection-ratios="0.5"
                 layout="nodisplay">
             </amp-position-observer>
             
