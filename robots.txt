@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nikhildhaliya.github.io/web-stories-site/sitemap.xml 

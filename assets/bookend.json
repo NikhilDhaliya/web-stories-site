@@ -1,0 +1,20 @@
+{
+  "bookendVersion": "v1.0",
+  "shareProviders": [
+    "facebook",
+    "twitter",
+    "email"
+  ],
+  "components": [
+    {
+      "type": "heading",
+      "text": "More to explore"
+    },
+    {
+      "type": "small",
+      "title": "Cooking Adventure",
+      "url": "stories/story2.html",
+      "image": "assets/story2-cover.jpg"
+    }
+  ]
+} 
