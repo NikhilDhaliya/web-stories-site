@@ -1,0 +1,63 @@
+<!doctype html>
+<html ⚡>
+<head>
+    <meta charset="utf-8">
+    <title>[STORY_TITLE] - Web Stories</title>
+    <link rel="canonical" href="[STORY_URL]">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /* Copy existing story styles */
+        amp-story {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .story-page {
+            background: linear-gradient(45deg, #f5f5f5, #ffffff);
+        }
+        
+        /* ... rest of the styles ... */
+    </style>
+</head>
+<body>
+    <amp-story standalone
+        title="[STORY_TITLE]"
+        publisher="Web Stories Site"
+        publisher-logo-src="../../assets/images/site/publisher-logo.png"
+        poster-portrait-src="[COVER_IMAGE_PATH]">
+
+        <!-- Cover Page -->
+        <amp-story-page id="cover" class="story-page">
+            <amp-story-grid-layer template="fill">
+                <div style="background: linear-gradient(45deg, #f5f5f5, #ffffff);"></div>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical">
+                <div class="content-wrapper">
+                    <h1>[STORY_TITLE]</h1>
+                    <p>[STORY_SUBTITLE]</p>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <!-- Content Page Template -->
+        <amp-story-page id="page[NUMBER]" class="story-page">
+            <amp-story-grid-layer template="fill">
+                <div style="background: linear-gradient(45deg, #f5f5f5, #ffffff);"></div>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical">
+                <div class="page-number">[NUMBER]</div>
+                <div class="content-wrapper">
+                    <h1>[PAGE_TITLE]</h1>
+                    <p>[PAGE_CONTENT]</p>
+                </div>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <!-- Bookend -->
+        <amp-story-bookend src="../../assets/bookend.json" layout="nodisplay">
+        </amp-story-bookend>
+    </amp-story>
+</body>
+</html> 
