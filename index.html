@@ -1,28 +1,98 @@
-<!-- Update style path -->
-<style amp-custom>
-    @import url('styles/style.css');
-</style>
+<!DOCTYPE html>
+<html ⚡ lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Stories - Travel & Cooking Adventures | Your Story Platform</title>
+    
+    <!-- AMP required scripts - correct preload order -->
+    <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js" crossorigin="anonymous">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    
+    <!-- Other AMP scripts -->
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+    
+    <!-- Preconnect to required origins -->
+    <link rel="preconnect" href="https://cdn.ampproject.org" crossorigin>
+    
+    <!-- Canonical link -->
+    <link rel="canonical" href="https://nikhildhaliya.github.io/web-stories-site/">
+    
+    <!-- SEO meta tags -->
+    <meta name="description" content="Discover engaging web stories about travel, cooking, and more">
+    <meta name="keywords" content="web stories, AMP stories, travel stories, cooking stories">
+    <meta property="og:title" content="Web Stories Site">
+    <meta property="og:description" content="Discover engaging web stories about travel, cooking, and more">
+    
+    <!-- AMP boilerplate -->
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    
+    <!-- Custom styles -->
+    <style amp-custom>
+        @import url('styles/style.css');
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="#stories">Stories</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Update paths -->
-<link rel="canonical" href="https://nikhildhaliya.github.io/web-stories-site/index.html">
+    <main>
+        <section id="stories">
+            <h1 class="fade-in">Featured Web Stories</h1>
+            <amp-position-observer
+                on="enter:fadeInAnimation.start"
+                layout="nodisplay">
+            </amp-position-observer>
+            
+            <div class="stories-grid">
+                <!-- Story Preview 1 -->
+                <div class="story-preview fade-in" role="button" tabindex="0" onclick="window.location.href='./stories/story1.html'">
+                    <div class="story-content">
+                        <div class="story-placeholder">
+                            <h3>Amazing Travel Story</h3>
+                            <p>Explore the hidden gems of Bali</p>
+                        </div>
+                    </div>
+                </div>
 
-<!-- Update navigation links -->
-<nav>
-    <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="#stories">Stories</a></li>
-    </ul>
-</nav>
+                <!-- Story Preview 2 -->
+                <div class="story-preview fade-in" role="button" tabindex="0" onclick="window.location.href='./stories/story2.html'">
+                    <div class="story-content">
+                        <div class="story-placeholder">
+                            <h3>Cooking Adventure</h3>
+                            <p>Master the art of pasta making</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<!-- Update story links -->
-<div class="story-preview" onclick="window.location.href='./stories/story1.html'">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="./contact.html">Contact</a>
+                <a href="./privacy.html">Privacy Policy</a>
+            </div>
+            <p>&copy; 2024 Web Stories Site. All rights reserved.</p>
+        </div>
+    </footer>
 
-<!-- Add preload for critical resources -->
-<link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
-<link rel="preload" as="style" href="styles/style.css">
-
-<!-- Add preconnect for external resources -->
-<link rel="preconnect" href="https://cdn.ampproject.org">
-<link rel="dns-prefetch" href="https://cdn.ampproject.org">
-</div>
+    <!-- Add noscript fallback -->
+    <noscript>
+        <div style="text-align: center; padding: 2rem;">
+            Please enable JavaScript to view our stories in the best possible way.
+        </div>
+    </noscript>
+</body>
+</html>
